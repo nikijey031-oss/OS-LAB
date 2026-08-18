@@ -1,3 +1,0 @@
-#include <stdio.h>
-#include <windows.h>
-int main(){STARTUPINFO si={0};PROCESS_INFORMATION pi={0};si.cb=sizeof(si);if(CreateProcess(NULL,"cmd.exe /c echo Child Process Executed",NULL,NULL,FALSE,0,NULL,NULL,&si,&pi)){printf("Parent Waiting for Child...\n");WaitForSingleObject(pi.hProcess,INFINITE);printf("Parent Resumes Execution\n");CloseHandle(pi.hProcess);CloseHandle(pi.hThread);}else printf("Process Creation Failed\n");return 0;}

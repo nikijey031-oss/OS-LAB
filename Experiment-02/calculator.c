@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){int a,b,ch; printf("ENTER TWO NUMBERS: ");scanf("%d%d",&a,&b);printf("\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\nENTER YOUR CHOICE: ");scanf("%d",&ch);switch(ch){case 1:printf("Result = %d\n",a+b);break;case 2:printf("Result = %d\n",a-b);break;case 3:printf("Result = %d\n",a*b);break;case 4:if(b)printf("Result = %d\n",a/b);else printf("Cannot divide by zero\n");break;default:printf("Invalid Option\n");}return 0;}

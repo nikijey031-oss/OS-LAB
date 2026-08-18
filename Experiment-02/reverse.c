@@ -1,2 +1,20 @@
 #include <stdio.h>
-int main(){int n,r=0,d;printf("ENTER THE NUMBER: ");scanf("%d",&n);while(n){d=n%10;r=r*10+d;n/=10;}printf("REVERSE OF THE NUMBER IS %d\n",r);return 0;}
+
+int main()
+{
+    int n, rnum = 0, remainder;
+
+    printf("ENTER THE NUMBER: ");
+    scanf("%d", &n);
+
+    while (n != 0)
+    {
+        remainder = n % 10;
+        rnum = rnum * 10 + remainder;
+        n /= 10;
+    }
+
+    printf("REVERSE OF THE NUMBER IS %d\n", rnum);
+
+    return 0;
+}
